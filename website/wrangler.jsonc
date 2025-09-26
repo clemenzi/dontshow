@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "dontshow-app",
+  "name": "v1-dontshow-preview",
   "compatibility_date": "2025-07-29",
   "assets": {
     "directory": "./dist",
