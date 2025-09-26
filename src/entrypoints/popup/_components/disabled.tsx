@@ -18,18 +18,7 @@ export default function Disabled() {
         </h1>
       </Card>
       <div className="absolute top-14 right-1 rounded-md bg-amber-300 px-2 py-0.5 text-amber-900">
-        <p className="text-sm">
-          <span className="mr-0.5 font-semibold">{t("notAvailable")}</span>
-          <button
-            className="font-semibold underline"
-            onClick={async () => {
-              const url = browser.runtime.getURL("/faq.html");
-              window.open(url + "#disabled", "_blank");
-            }}
-          >
-            {t("why")}
-          </button>
-        </p>
+        <p className="mr-0.5 text-sm font-semibold">{t("notAvailable")}</p>
       </div>
       <div className="flex h-[calc(100vh-50px)] w-full flex-col items-center justify-center gap-4">
         <Switch className="scale-[400%]" disabled />

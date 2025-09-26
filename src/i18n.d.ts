@@ -73,7 +73,6 @@ export type GeneratedI18nStructure = {
   "settings.about.footer": { substitutions: 1; plural: false };
   "popup.disabled": { substitutions: 0; plural: false };
   "popup.notAvailable": { substitutions: 0; plural: false };
-  "popup.why": { substitutions: 0; plural: false };
   "popup.reload": { substitutions: 0; plural: false };
   "elementSelection.deleteAll": { substitutions: 0; plural: false };
   "@@extension_id": { substitutions: 0; plural: false };
