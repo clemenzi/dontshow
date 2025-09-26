@@ -2,7 +2,7 @@
   "name": "dontshow",
   "description": "Hide sensitive information from websites ",
   "private": true,
-  "version": "1.0.0-dev-2025719",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "wxt",
