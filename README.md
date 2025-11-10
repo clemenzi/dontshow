@@ -1,14 +1,11 @@
-# dontshow extension
+![](./public/cover.png)
 
-**dontshow** is a browser extension that helps users filter or hide unwanted content on websites. Built with React, Tailwind CSS, and WXT, it offers a customizable and user-friendly experience.
+# Don't Show
 
-## 🚀 Features
+A lightweight browser extension to censor personal informations on websites. Built with React, Tailwind CSS v4, and WXT.
 
-- Hide or filter specific words, phrases, or elements on web pages
-- Customizable filters and settings
-- Modern UI with React and Tailwind CSS
-- Fast and lightweight
+### [dontshow.app](https://www.dontshow.app) · [Chrome Web Store](https://chromewebstore.google.com/detail/dont-show/gdebfgieajfdgdcdmpnbakflnkoaankk) · [Firefox Add‑on](https://addons.mozilla.org/firefox/addon/dontshow/)
 
-## 📄 License
+## License
 
-MIT
+MIT © 2025 Valerio Clemenzi and Contributors

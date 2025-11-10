@@ -1,0 +1,112 @@
+settings:
+  tabs:
+    settings: "Impostazioni"
+    filters: "Filtri"
+    elements: "Elementi"
+    about: "Informazioni"
+  settings:
+    title: "Impostazioni"
+    description: "Qui puoi gestire le impostazioni generali per l'estensione, come attivarla o disattivarla e regolare altre preferenze."
+    enableExtension:
+      title: "Abilita Estensione"
+      description: "Attiva o disattiva l'estensione a livello globale."
+    general:
+      title: "Impostazioni Generali"
+      sensitiveAlert:
+        title: "Avviso Dati Sensibili"
+        description: "Mostra un avviso quando una pagina contiene contenuti sensibili."
+      inputCensoring:
+        title: "Censura Caselle di Testo"
+        description: "Censura automaticamente le caselle di testo contenenti contenuti sensibili."
+      uncensorOnFocus:
+        title: "Mostra Contenuto Originale alla Selezione"
+        description: "Mostra il contenuto originale delle caselle di testo quando sono selezionate."
+    dynamicFilters:
+      title: "Filtri Dinamici"
+      ip:
+        title: "Filtro IP Personale"
+        description: "Filtra automaticamente il tuo indirizzo IP personale."
+    websites:
+      title: "Impostazioni Siti Web"
+      enableOnLocalhost:
+        title: "Abilita su Localhost"
+        description: "Abilita l'estensione su localhost per scopi di sviluppo."
+      disabledWebsites:
+        title: "Siti Web Disabilitati"
+        description: "Gestisci i siti web per i quali l'estensione è disabilitata."
+        table:
+          website: "Sito Web"
+          actions: "Azioni"
+    developer:
+      title: "Impostazioni Sviluppatore"
+      debugMessages:
+        title: "Messaggi di Debug"
+        description: "Mostra i messaggi di debug nella console."
+  filters:
+    sensitiveAlert:
+      title: "Questa sezione contiene contenuti sensibili!"
+      description: "Questa sezione contiene tutti i tuoi filtri, che possono includere contenuti sensibili. Clicca il pulsante qui sotto per continuare."
+      button: "Continua con i Filtri"
+    title: "Filtri"
+    description: "Gestisci i tuoi filtri. Puoi aggiungere, modificare o rimuovere filtri che nascondono contenuti indesiderati."
+    addFilter:
+      title: "Aggiungi Filtro"
+      description: "Inserisci i dettagli del nuovo filtro che desideri aggiungere."
+    editFilter:
+      title: "Modifica Filtro"
+      description: "Modifica i dettagli del filtro che desideri modificare."
+    updateFilter:
+      title: "Aggiorna Filtro"
+    noFilters:
+      title: "Nessun filtro ancora"
+      description: "Inizia aggiungendo il tuo primo filtro per nascondere contenuti indesiderati."
+    expression:
+      label: "Espressione"
+      placeholder: "Inserisci l'espressione da filtrare"
+    domain:
+      label: "Dominio"
+      placeholder: "Inserisci il dominio (* per tutti i domini)"
+    action:
+      label: "Azione"
+      placeholder: "Seleziona il tipo di azione"
+      options:
+        censor: "Censura"
+        remove: "Rimuovi"
+    actions:
+      label: "Azioni"
+    tooltips:
+      automatic: "Questo filtro è stato generato e gestito dall'estensione."
+      switch: "Abilita/disabilita questo filtro"
+      edit: "Modifica questo filtro"
+      delete: "Elimina questo filtro"
+    cancel: "Annulla"
+  elements:
+    title: "Elementi"
+    description: "Questa sezione consente di visualizzare ed eliminare gli elementi selezionati nelle pagine web. Questi elementi vengono utilizzati per identificare e gestire i contenuti che si desidera censurare o rimuovere."
+    tabs:
+      list: "Elenco"
+      raw: "Editore Testuale"
+    list:
+      website: "Sito Web"
+      selector: "Selettore"
+      action: "Azione"
+      actions: "Azioni"
+    raw:
+      save: "Salva"
+      help:
+        pattern: "Nota: Ogni riga dovrebbe seguire il modello:"
+  about:
+    title: "Informazioni su questa Estensione"
+    description: "Questa estensione ti aiuta a gestire i contenuti indesiderati sul web consentendoti di filtrare parole o frasi specifiche. Puoi aggiungere filtri per censurare o rimuovere contenuti che trovi inappropriati, troppo sensibili o semplicemente distraenti."
+    usefulLinks: "Link Utili"
+    githubRepository: "Repository GitHub"
+    officialWebsite: "Sito Ufficiale"
+    reportIssue: "Segnala un Problema"
+    supportProject: "Supporta il Progetto"
+    footer: "Don't Show $1 distribuito sotto la Licenza MIT da Valerio Clemenzi"
+popup:
+  disabled: "Estensione Disabilitata"
+  notAvailable: "Non disponibile in questa scheda."
+  reload: "Ricarica la pagina per applicare le modifiche"
+elementSelection:
+  deleteAll: "Cancella Tutto"

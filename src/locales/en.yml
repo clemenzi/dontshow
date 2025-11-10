@@ -1,0 +1,112 @@
+settings:
+  tabs:
+    settings: "Settings"
+    filters: "Filters"
+    elements: "Elements"
+    about: "About"
+  settings:
+    title: "Settings"
+    description: "Here you can manage general settings for the extension, such as enabling or disabling it, and adjusting other preferences."
+    enableExtension:
+      title: "Enable Extension"
+      description: "Toggle the extension on or off globally."
+    general:
+      title: "General Settings"
+      sensitiveAlert:
+        title: "Sensitive Alert"
+        description: "Show a warning when a page contains sensitive content."
+      inputCensoring:
+        title: "Censure Inputs"
+        description: "Automatically censure inputs containing sensitive content."
+      uncensorOnFocus:
+        title: "Uncensor Inputs on Focus"
+        description: "Uncensor inputs when they are focused, allowing you to see the original content."
+    dynamicFilters:
+      title: "Dynamic Filters Settings"
+      ip:
+        title: "Personal IP Address Filter"
+        description: "Automatically filters your personal IP address."
+    websites:
+      title: "Websites Settings"
+      enableOnLocalhost:
+        title: "Enable on Localhost"
+        description: "Enable the extension on localhost for development purposes."
+      disabledWebsites:
+        title: "Disabled Websites"
+        description: "Manage websites that are disabled from using the extension."
+        table:
+          website: "Website"
+          actions: "Actions"
+    developer:
+      title: "Developer Settings"
+      debugMessages:
+        title: "Debug Messages"
+        description: "Show debug messages in the console."
+  filters:
+    sensitiveAlert:
+      title: "This section contains sensitive content!"
+      description: "This section contains all your filters, which may include sensitive content. Click the button below to continue."
+      button: "Continue to Filters"
+    title: "Filters"
+    description: "Manage your filters here. You can add, edit, or remove filters that hide unwanted content."
+    addFilter:
+      title: "Add Filter"
+      description: "Enter the details of the new filter you want to add."
+    editFilter:
+      title: "Edit Filter"
+      description: "Edit the details of the filter you want to modify."
+    updateFilter:
+      title: "Update Filter"
+    noFilters:
+      title: "No filters yet"
+      description: "Get started by adding your first filter to hide unwanted content."
+    expression:
+      label: "Expression"
+      placeholder: "Enter the expression to filter"
+    domain:
+      label: "Domain"
+      placeholder: "Enter the domain (* for all domains)"
+    action:
+      label: "Action"
+      placeholder: "Select action type"
+      options:
+        censor: "Censor"
+        remove: "Remove"
+    actions:
+      label: "Actions"
+    tooltips:
+      automatic: "This filter is generated and managed by the extension."
+      switch: "Enable/disable this filter"
+      edit: "Edit this filter"
+      delete: "Delete this filter"
+    cancel: "Cancel"
+  elements:
+    title: "Elements"
+    description: "This section allows you to view and delete elements that have been selected on web pages. These elements are used to identify and manage content that you want to censor or remove."
+    tabs:
+      list: "List"
+      raw: "Raw"
+    list:
+      website: "Website"
+      selector: "Selector"
+      action: "Action"
+      actions: "Actions"
+    raw:
+      save: "Save"
+      help:
+        pattern: "Note: Each line should follow the pattern:"
+  about:
+    title: "About this Extension"
+    description: "This extension helps you manage unwanted content on the web by allowing you to filter out specific words or phrases. You can add filters to censor or remove content that you find inappropriate, too sensitive, or simply distracting."
+    usefulLinks: "Useful Links"
+    githubRepository: "GitHub Repository"
+    officialWebsite: "Official Website"
+    reportIssue: "Report an Issue"
+    supportProject: "Support the Project"
+    footer: "Don't Show $1 distributed under the MIT License by Valerio Clemenzi"
+popup:
+  disabled: "Extension Disabled"
+  notAvailable: "Not available in this tab."
+  reload: "Reload page to apply changes"
+elementSelection:
+  deleteAll: "Delete All"

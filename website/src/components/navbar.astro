@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+import logo from "@/assets/logo.svg";
+---
+
+<nav class="flex items-center justify-between container mx-auto py-4 px-2 lg:px-0">
+  <a href="/" class="text-2xl font-bold flex items-center space-x-2">
+    <Image src={logo} alt="Don't Show" class="h-6 w-auto" />
+    <span>Don't Show</span>
+  </a>
+
+  <div class="flex items-center space-x-4">
+    <a href="https://github.com/sponsors/clemenzi" class="hover:underline hidden md:inline-block">
+      Support the project
+    </a>
+    <a
+      id="install-button"
+      href="https://chromewebstore.google.com/detail/dont-show/gdebfgieajfdgdcdmpnbakflnkoaankk"
+      class="bg-white text-black px-4 py-1.5 rounded-full font-semibold hover:bg-gray-200 transition"
+    >
+      Install, it's free!
+    </a>
+  </div>
+</nav>

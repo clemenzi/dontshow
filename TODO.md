@@ -1,0 +1,1 @@
+- Autoupdate settings, filters ecc... from v0 to v1 without breaking things

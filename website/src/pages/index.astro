@@ -1,0 +1,72 @@
+---
+import Layout from "@/layouts/layout.astro";
+import Carousel from "./_components/carousel";
+import Card from "./_components/card";
+import Compare from "./_components/compare";
+import { Book, Settings, Smile } from "lucide-react";
+import Footer from "@/components/footer.astro";
+---
+
+<Layout title="Don't Show - The Privacy Filter Your Browser Is Missing">
+  <div
+    class="container mx-auto flex flex-col lg:flex-row items-center justify-center py-16 lg:py-24 space-y-10 lg:space-y-0"
+  >
+    <div class="flex flex-col space-y-6 md:w-4/5 lg:w-1/2">
+      <h1 class="text-4xl text-center lg:text-left md:text-6xl 2xl:text-7xl/20 font-bold mt-20">
+        The privacy filter your <br /> browser is missing.
+      </h1>
+      <p class="text-center md:text-xl lg:text-left lg:text-2xl">
+        Don't Show is a privacy extension that automatically hides sensitive information present on
+        your screen while browsing.
+      </p>
+      <div class="flex items-center justify-center lg:justify-start space-x-2 lg:space-x-6">
+        <a
+          id="install-button"
+          href="https://chromewebstore.google.com/detail/dont-show/gdebfgieajfdgdcdmpnbakflnkoaankk"
+          class="bg-white border-2 border-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 hover:border-gray-200 transition"
+        >
+          Install, it's free!
+        </a>
+        <a
+          href="https://github.com/clemenzi/dontshow"
+          class="border-2 border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-black transition"
+        >
+          View on GitHub
+        </a>
+      </div>
+    </div>
+    <div class="lg:w-1/2">
+      <Carousel client:load />
+    </div>
+  </div>
+
+  <div class="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-4 p-4 lg:p-0">
+    <Card
+      title="Free and Open Source"
+      description="100% open source on GitHub. Free forever—no subscriptions or tracking; audit the code or contribute anytime."
+      icon={Book}
+    />
+    <Card
+      title="Easy Setup"
+      description="Install in minutes. Create simple rules to blur or hide emails, names, and other sensitive data across sites. Regex are supported."
+      icon={Settings}
+    />
+    <Card
+      title="User-Friendly"
+      description="Simple, clear interface: toggle per-site with a switch and create rules without code. You can also select elements directly on the page."
+      icon={Smile}
+    />
+  </div>
+
+  <div class="container mx-auto py-28 space-y-6">
+    <h2 class="text-3xl text-center font-bold md:text-4xl lg:text-5xl">
+      Your data follows you everywhere. Time to don't show it.
+    </h2>
+    <p class="text-center md:text-xl lg:text-2xl mx-auto">
+      Don't let your sensitive information be exposed. Take control of your privacy with Don't Show.
+    </p>
+    <div class="mx-auto w-full max-w-6xl px-4">
+      <Compare client:load />
+    </div>
+  </div>
+</Layout>
