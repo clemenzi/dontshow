@@ -41,8 +41,7 @@ export default defineConfig({
       gecko: {
         // @ts-ignore -- missing from types
         data_collection_permissions: {
-          required: [],
-          optional: [],
+          required: ["none"],
         },
       },
     },
