@@ -34,7 +34,7 @@ export default defineConfig({
 
   manifest: {
     name: "Don't Show",
-    permissions: ["storage", "contextMenus"],
+    permissions: ["storage", "contextMenus", "tabs", "activeTab"],
     options_page: "settings.html",
     default_locale: "en",
   },
