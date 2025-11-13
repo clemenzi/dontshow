@@ -34,8 +34,17 @@ export default defineConfig({
 
   manifest: {
     name: "Don't Show",
-    permissions: ["storage", "contextMenus", "tabs", "activeTab"],
+    permissions: ["storage", "contextMenus", "activeTab"],
     options_page: "settings.html",
     default_locale: "en",
+    browser_specific_settings: {
+      gecko: {
+        // @ts-ignore -- missing from types
+        data_collection_permissions: {
+          required: [],
+          optional: [],
+        },
+      },
+    },
   },
 });
