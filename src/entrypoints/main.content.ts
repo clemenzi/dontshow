@@ -26,6 +26,8 @@ const processGeneralFilters = async () => {
       }
 
       for (const filter of filters ?? []) {
+        if (!filter.expression) continue;
+
         if (filter.expression.startsWith("/") && filter.expression.endsWith("/")) {
           const regex = new RegExp(filter.expression.slice(1, -1), "gi");
 
@@ -110,6 +112,8 @@ const processInputs = async () => {
     if (!target.value) continue;
 
     for (const filter of filters ?? []) {
+      if (!filter.expression) continue;
+
       if (filter.expression.startsWith("/") && filter.expression.endsWith("/")) {
         const regex = new RegExp(filter.expression.slice(1, -1), "gi");
 
