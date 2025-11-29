@@ -1,4 +1,5 @@
-import { Filter } from "@/types";
+import { defaultSettings } from "@/const";
+import { Filter, Settings } from "@/types";
 import { type ClassValue, clsx } from "clsx";
 import { isMatch } from "matcher";
 import { twMerge } from "tailwind-merge";
@@ -21,6 +22,15 @@ export const textReplacement = (
   return text;
 };
 
+export const isLocalhost = (hostname: string): boolean => {
+  return (
+    hostname === "localhost" ||
+    hostname === "127.0.0.1" ||
+    hostname === "[::1]" ||
+    hostname.endsWith(".localhost")
+  );
+};
+
 export const isEnabled = async (): Promise<boolean> => {
   let res = true;
 
@@ -31,6 +41,15 @@ export const isEnabled = async (): Promise<boolean> => {
   const url = new URL(document.location.href);
   if (disabledWebsites?.includes(url.hostname)) {
     res = false;
+  }
+
+  // Check if localhost and if localhost is enabled
+  if (isLocalhost(url.hostname)) {
+    const settings = await storage.getItem<Settings>("local:settings");
+    const enableOnLocalhost = settings?.enableOnLocalhost ?? defaultSettings.enableOnLocalhost;
+    if (!enableOnLocalhost) {
+      res = false;
+    }
   }
 
   return res;
