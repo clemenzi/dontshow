@@ -75,16 +75,21 @@ export default function Filters() {
     return formData.expression.trim() !== "" && formData.domain.trim() !== "";
   };
 
+  // Convert form data to a Filter, handling path conversion
+  const createFilterFromFormData = (): Filter => ({
+    expression: formData.expression,
+    domain: formData.domain,
+    path: formData.path.trim() || undefined,
+    type: formData.type,
+    enabled: true,
+    automatic: false,
+  });
+
   // Handlers
   const handleAddFilter = () => {
     if (!validateForm()) return;
 
-    const newFilter: Filter = {
-      ...formData,
-      path: formData.path || undefined,
-      enabled: true,
-      automatic: false,
-    };
+    const newFilter = createFilterFromFormData();
     setFilters([...filters, newFilter]);
     closeDialog();
   };
@@ -105,9 +110,7 @@ export default function Filters() {
     if (!validateForm() || editingIndex === null) return;
 
     const updatedFilters = filters.map((filter, i) =>
-      i === editingIndex
-        ? { ...formData, path: formData.path || undefined, enabled: true, automatic: false }
-        : filter
+      i === editingIndex ? createFilterFromFormData() : filter
     );
     setFilters(updatedFilters);
     closeDialog();
