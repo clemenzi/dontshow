@@ -45,7 +45,10 @@ export const getProcessableFilters = async (): Promise<Filter[]> => {
     filters?.filter(f => {
       const url = new URL(document.location.href);
 
-      return f.expression && isMatch(url.hostname, f.domain) && f.enabled;
+      const domainMatches = isMatch(url.hostname, f.domain);
+      const pathMatches = !f.path || isMatch(url.pathname, f.path);
+
+      return f.expression && domainMatches && pathMatches && f.enabled;
     }) ?? []
   );
 };

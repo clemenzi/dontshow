@@ -43,6 +43,8 @@ export type GeneratedI18nStructure = {
   "settings.filters.expression.placeholder": { substitutions: 0; plural: false };
   "settings.filters.domain.label": { substitutions: 0; plural: false };
   "settings.filters.domain.placeholder": { substitutions: 0; plural: false };
+  "settings.filters.path.label": { substitutions: 0; plural: false };
+  "settings.filters.path.placeholder": { substitutions: 0; plural: false };
   "settings.filters.action.label": { substitutions: 0; plural: false };
   "settings.filters.action.placeholder": { substitutions: 0; plural: false };
   "settings.filters.action.options.censor": { substitutions: 0; plural: false };

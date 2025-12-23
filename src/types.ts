@@ -10,6 +10,7 @@ export interface Settings {
 export interface Filter {
   expression: string;
   domain: string;
+  path?: string;
   type: "censor" | "remove";
   automatic?: boolean;
   enabled: boolean;

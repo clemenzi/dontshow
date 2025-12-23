@@ -66,6 +66,9 @@ settings:
     domain:
       label: "Dominio"
       placeholder: "Inserisci il dominio (* per tutti i domini)"
+    path:
+      label: "Percorso"
+      placeholder: "Inserisci il percorso (lascia vuoto per tutti i percorsi)"
     action:
       label: "Azione"
       placeholder: "Seleziona il tipo di azione"

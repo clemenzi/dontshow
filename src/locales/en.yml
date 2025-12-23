@@ -66,6 +66,9 @@ settings:
     domain:
       label: "Domain"
       placeholder: "Enter the domain (* for all domains)"
+    path:
+      label: "Path"
+      placeholder: "Enter the path (leave empty for all paths)"
     action:
       label: "Action"
       placeholder: "Select action type"

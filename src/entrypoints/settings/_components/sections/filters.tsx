@@ -33,12 +33,14 @@ import { useState } from "react";
 interface FilterFormData {
   expression: string;
   domain: string;
+  path: string;
   type: Filter["type"];
 }
 
 const DEFAULT_FORM_DATA: FilterFormData = {
   expression: "",
   domain: "*",
+  path: "",
   type: "censor",
 };
 
@@ -77,7 +79,12 @@ export default function Filters() {
   const handleAddFilter = () => {
     if (!validateForm()) return;
 
-    const newFilter: Filter = { ...formData, enabled: true, automatic: false };
+    const newFilter: Filter = {
+      ...formData,
+      path: formData.path || undefined,
+      enabled: true,
+      automatic: false,
+    };
     setFilters([...filters, newFilter]);
     closeDialog();
   };
@@ -87,6 +94,7 @@ export default function Filters() {
     setFormData({
       expression: filter.expression,
       domain: filter.domain,
+      path: filter.path || "",
       type: filter.type,
     });
     setEditingIndex(index);
@@ -97,7 +105,9 @@ export default function Filters() {
     if (!validateForm() || editingIndex === null) return;
 
     const updatedFilters = filters.map((filter, i) =>
-      i === editingIndex ? { ...formData, enabled: true, automatic: false } : filter
+      i === editingIndex
+        ? { ...formData, path: formData.path || undefined, enabled: true, automatic: false }
+        : filter
     );
     setFilters(updatedFilters);
     closeDialog();
@@ -174,6 +184,16 @@ export default function Filters() {
               </div>
 
               <div className="space-y-2">
+                <Label htmlFor="path">{t("path.label")}</Label>
+                <Input
+                  id="path"
+                  placeholder={t("path.placeholder")}
+                  value={formData.path}
+                  onChange={e => setFormData(prev => ({ ...prev, path: e.target.value }))}
+                />
+              </div>
+
+              <div className="space-y-2">
                 <Label htmlFor="action">{t("action.label")}</Label>
                 <Select
                   value={formData.type}
@@ -215,6 +235,7 @@ export default function Filters() {
             <TableRow>
               <TableHead>{t("expression.label")}</TableHead>
               <TableHead>{t("domain.label")}</TableHead>
+              <TableHead>{t("path.label")}</TableHead>
               <TableHead>{t("action.label")}</TableHead>
               <TableHead className="w-[100px]">{t("actions.label")}</TableHead>
             </TableRow>
@@ -234,6 +255,7 @@ export default function Filters() {
                   )}
                 </TableCell>
                 <TableCell>{filter.domain}</TableCell>
+                <TableCell>{filter.path || "*"}</TableCell>
                 <TableCell className="capitalize">{filter.type}</TableCell>
                 <TableCell>
                   <div className="flex items-center gap-1">
