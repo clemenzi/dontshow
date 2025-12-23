@@ -46,6 +46,7 @@ export const getProcessableFilters = async (): Promise<Filter[]> => {
       const url = new URL(document.location.href);
 
       const domainMatches = isMatch(url.hostname, f.domain);
+      // Path matching: if path is not set or empty, match all paths
       const pathMatches = !f.path || isMatch(url.pathname, f.path);
 
       return f.expression && domainMatches && pathMatches && f.enabled;

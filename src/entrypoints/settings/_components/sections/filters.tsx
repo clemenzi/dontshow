@@ -258,7 +258,7 @@ export default function Filters() {
                   )}
                 </TableCell>
                 <TableCell>{filter.domain}</TableCell>
-                <TableCell>{filter.path || "*"}</TableCell>
+                <TableCell>{filter.path || "-"}</TableCell>
                 <TableCell className="capitalize">{filter.type}</TableCell>
                 <TableCell>
                   <div className="flex items-center gap-1">
