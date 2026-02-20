@@ -31,7 +31,7 @@ export const isEnabled = async (): Promise<boolean> => {
   const url = new URL(document.location.href);
 
   const isEnabledOnLocalhost = await storage.getItem<boolean>("local:enableOnLocalhost");
-  
+
   if (!isEnabledOnLocalhost) {
     disabledWebsites?.push("localhost", "127.0.0.1", "::1");
   }
